@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const uploadButton = document.getElementById("upload-button");
 
   let username = prompt("Enter your username:");
-  let socket = new WebSocket("ws://localhost:8000/ws");
+  let socket = new WebSocket("wss://echo-chat-backend.onrender.com/ws");
   let mediaRecorder;
   let chunks = [];
   let messageCounter = 0;
