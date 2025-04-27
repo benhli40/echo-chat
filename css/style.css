@@ -1,0 +1,127 @@
+/* Basic Echo Chat Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 600px;
+  max-width: 98%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #292929;
+  padding: 15px;
+  text-align: center;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;  
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+#send-button {
+  background-color: #2979ff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+#send-button:hover {
+  background-color: #5393ff;
+}
+
+.message {
+  display: flex;
+  margin: 10px;
+}
+
+.message.you {
+  justify-content: flex-end; /* Your messages go to the right */
+}
+
+.message.other {
+  justify-content: flex-start; /* Other messages go to the left */
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  line-height: 1.4;
+  background-color: #2979ff; /* Default blue bubble */
+  color: white;
+}
+
+.message.other .bubble {
+  background-color: #2c2c2c; /* Dark gray bubble for others */
+  color: white;
+}
+
+.system-message {
+  text-align: center;
+  margin: 10px 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+#record-button {
+  background-color: #ff4081;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+#record-button:hover {
+  background-color: #ff66a3;
+}
+
+#upload-button {
+  background-color: #00c853;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+#upload-button:hover {
+  background-color: #00e676;
+}
+
+@media (max-width: 600px) {
+  #chat-window {
+    max-width: 95%;
+  }
+}
